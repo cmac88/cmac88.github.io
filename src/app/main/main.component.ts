@@ -10,6 +10,20 @@ export class MainComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    window.onscroll = function() {scrollFunction()};
+    var nav = document.getElementById("nav");
+
+  function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          document.getElementById("nav").style.top = "0";
+
+      } else {
+          document.getElementById("nav").style.top = "-50px";
+      }
+  }
+ 
+    
+  
     var canvas = document.querySelector("canvas");
     var c = canvas.getContext("2d");
     var h = window.innerHeight;
@@ -116,9 +130,10 @@ export class MainComponent implements OnInit {
         circleArray[i].update();
       }
     }
+    
     animate();
     init();
-
+    
    
   }
   

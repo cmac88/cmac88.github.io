@@ -12,7 +12,7 @@ canvas{
     text-align: center;
     width: 100%;
     letter-spacing: 5px;
-    top: 30%;
+    top: 32%;
     font-size: 120%;  
 }
 
@@ -29,11 +29,14 @@ canvas{
     text-shadow: 2px 2px 8px #170e22;
 }
 #nav{
+    top: -50px;
+    position: fixed;
+    width: 100%;
     text-align: right; 
     z-index: 900;
     background: rgb(113, 109, 139);
     padding: 14px 0px;
-    margin-top: -7px;
+    /* margin-top: -7px; */
     
 }
 
@@ -43,7 +46,7 @@ canvas{
 
 #nav li a{
     text-align: center;
-    padding: 14px 16px;
+    padding: 0px 16px;
     text-decoration: none;
     color: white;
 }
@@ -53,13 +56,17 @@ canvas{
 }
 
 .me{
-    padding: 50px;
+    margin-top: -9px;
+    padding: 40px;
     background-image: linear-gradient(
         to right bottom, 
         rgba(125, 84, 158, 0.397),
         rgba(102, 121, 185, 0.425)),
         url("/assets/images/full-bloom.png");
         
+}
+.skill{
+    height: 1500px;
 }
 .skill img{
     height: 40px;
@@ -68,9 +75,8 @@ canvas{
 .logo1, .logo2{
     text-align: center;
 }
-.logo2{
 
-}
+
 @media only screen and (max-width: 900px){
     .corie hr{
         width: 39%;  
@@ -123,6 +129,7 @@ canvas{
     .large{
         display: none;
     }
+    
 }
 @media only screen and (min-width: 900px){
     .pic, .show{
@@ -131,8 +138,8 @@ canvas{
     .me{
         display: flex;
         flex-direction: row;
-        padding-top: 130px;
-        padding-bottom: 160px; 
+        padding-top: 80px;
+        padding-bottom: 100px; 
     }
     .pic2{
         width: 60%;
@@ -171,15 +178,15 @@ canvas{
     }
     .img1{
         top: 0%;
-        left: 8%;
+        left: 6%;
     }
     .img2{
         top: 0%;
-        left: 64%;
+        left: 62%;
     }
     .img3{
         top: 0%;
-        left: 36%;
+        left: 34%;
         
     }
     .img1:hover, .img2:hover, .img3:hover{
@@ -187,10 +194,11 @@ canvas{
         border: 10px solid rgba(255, 255, 255);
         z-index: 10;
         width: 250px;
-        margin-top: -8px; 
+        margin-top: 10px;
+        background: rgba(255, 255, 255, 0.479);
     }
     .img1:hover{
-        margin-left: 20px; 
+        margin-left: 16px; 
     }
     .img2:hover{
         margin-left: -35px;
@@ -199,4 +207,5 @@ canvas{
         margin-left: -10px;
 
     }
+    
 }
