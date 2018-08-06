@@ -1,5 +1,6 @@
 .p{
     position: relative;
+    top: 30px;
 }
 
 canvas{
@@ -12,7 +13,7 @@ canvas{
     text-align: center;
     width: 100%;
     letter-spacing: 5px;
-    top: 32%;
+    top: 34%;
     font-size: 120%;  
 }
 
@@ -29,15 +30,14 @@ canvas{
     text-shadow: 2px 2px 8px #170e22;
 }
 #nav{
-    top: -50px;
+    top: 0;
     position: fixed;
+    /* display: none; */
     width: 100%;
     text-align: right; 
     z-index: 900;
     background: rgb(113, 109, 139);
-    padding: 14px 0px;
-    /* margin-top: -7px; */
-    
+    padding: 14px 0px; 
 }
 
 #nav li{
@@ -46,7 +46,7 @@ canvas{
 
 #nav li a{
     text-align: center;
-    padding: 0px 16px;
+    padding: 14px 16px;
     text-decoration: none;
     color: white;
 }
@@ -55,7 +55,7 @@ canvas{
     color: rgb(8, 61, 56);
 }
 
-.me{
+#me{
     margin-top: -9px;
     padding: 40px;
     background-image: linear-gradient(
@@ -65,17 +65,34 @@ canvas{
         url("/assets/images/full-bloom.png");
         
 }
-.skill{
+#skill{
     height: 1500px;
+    border-top: 10px 10px solid #372350;
+    background-image: linear-gradient(
+        to bottom, 
+        #372350be,
+        rgba(57, 67, 102, 0.534)),
+        url("/assets/images/seigaiha.png");
 }
-.skill img{
+#skill img{
     height: 40px;
     padding: 10px;
 }
 .logo1, .logo2{
     text-align: center;
 }
-
+.set{
+    width: 200px;
+    display: inline-block;
+}
+fieldset{
+    border-radius: 40px;
+    border: 2px solid white;
+}
+legend{
+    text-align: center;
+    color: white;
+}
 
 @media only screen and (max-width: 900px){
     .corie hr{
@@ -99,7 +116,7 @@ canvas{
         border: 10px solid rgba(97, 143, 170, 0.582);
     }
 
-    .me h1{
+    #me h1{
         text-align: center;
         margin-top: 20px;
         margin-bottom: 10px;
@@ -129,17 +146,20 @@ canvas{
     .large{
         display: none;
     }
-    
+    #projects{
+        height: 100px;
+        width: 100%;
+    }
 }
 @media only screen and (min-width: 900px){
     .pic, .show{
         display: none;
     }
-    .me{
+    #me{
         display: flex;
         flex-direction: row;
         padding-top: 80px;
-        padding-bottom: 100px; 
+        padding-bottom: 80px; 
     }
     .pic2{
         width: 60%;

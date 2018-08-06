@@ -10,20 +10,6 @@ export class MainComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    window.onscroll = function() {scrollFunction()};
-    var nav = document.getElementById("nav");
-
-  function scrollFunction() {
-      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-          document.getElementById("nav").style.top = "0";
-
-      } else {
-          document.getElementById("nav").style.top = "-50px";
-      }
-  }
- 
-    
-  
     var canvas = document.querySelector("canvas");
     var c = canvas.getContext("2d");
     var h = window.innerHeight;
@@ -112,7 +98,14 @@ export class MainComponent implements OnInit {
     var circleArray = [];
     function init(){
         circleArray = [];
-        for (let index = 0; index < 500; index++) {
+        var num = 0;
+        if(innerWidth < 500){
+          num = 500;
+        }else{
+          num = 800;
+        }
+        console.log(num);
+        for (let index = 0; index < num; index++) {
           var radius = Math.random() * 3 + 1;
           let x = Math.random() * (innerWidth - radius * 2) + radius;
           let y = Math.random() * (innerHeight/3 - radius * 2) + radius;
@@ -136,6 +129,8 @@ export class MainComponent implements OnInit {
     
    
   }
-  
+  scrollToElement(id){
+    document.getElementById(id).scrollIntoView({behavior: 'smooth' , block: 'start', inline: 'nearest'});
+  }
 
 }

@@ -1,8 +1,8 @@
 <div id="nav">
         <ul>
-          <li><a href="/#about">About Me</a></li>
-          <li><a href="/#skills">Skills</a></li>
-          <li><a href="">Projects</a></li>
+          <li><a (click)="scrollToElement('me')" >About Me</a></li>
+          <li><a (click)="scrollToElement('skill')">Skills</a></li>
+          <li><a (click)="scrollToElement('projects')">Projects</a></li>
           <li><a href="">Contact</a></li>
         </ul>
 </div>
@@ -15,8 +15,8 @@
     <canvas></canvas>
 </div>
 
-<div id="about"></div>
-<div class="me">
+<!-- <div id="about"></div> -->
+<div id="me">
     <h1 class="show">A little about me...</h1>
     <!-- hidden above 800px -->
     <div class="pic">
@@ -35,10 +35,12 @@
         <img class="img3" src="assets/images/will.gif" alt="Corie McLaughlin">
     </div>
 </div>  
-<div id="skills"></div>
-<div class="skill">
-    <h1>My Skills</h1>
-    
+<div id="skill">
+    <!-- <div class="set">
+        <fieldset>
+            <legend>Tech</legend>
+        </fieldset>
+    </div> -->
     <div class="logo1">
         <img id="icon1" src="assets/icons/1.png" alt="HTML, CSS, JS">
         <img id="icon2" src="assets/icons/11.png" alt="Java 8">
@@ -55,4 +57,7 @@
         <img id="icon11" src="assets/icons/13.png" alt="SQLite">
         <img id="icon12" src="assets/icons/14.png" alt="MongoDB">     
     </div>
+</div>
+<div id="projects">
+    <p>hi</p>
 </div>
