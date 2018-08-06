@@ -6,10 +6,41 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main.component.css']
 })
 export class MainComponent implements OnInit {
-
+  public skillsList = [];
+  public Object;
   constructor() { }
 
   ngOnInit() {
+    this.Object = Object;
+    this.skillsList = [
+      { "Languages" : [
+        "Java", "Python", "JavaScript"
+      ]},
+      { "Frameworks" : [
+        "Spring", "Django", "Flask", "Angular", "Express", "Node.js"
+      ]},
+      { "Databases" : [
+        "MySQL", "SQLite", "NoSQL : MongoDB, Mongoose.js"
+      ]},
+      { "Front-End" : [
+        "HTML", "CSS", "SASS", "JQuery"
+      ]},
+      { "Methodologies" : [
+        "Object-oriented programming",
+        "MVC",
+        "RESTful Architecture"
+      ]}
+    ]
+
+
+
+
+
+
+
+
+
+
     var canvas = document.querySelector("canvas");
     var c = canvas.getContext("2d");
     var h = window.innerHeight;

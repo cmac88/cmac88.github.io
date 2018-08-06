@@ -36,12 +36,17 @@
     </div>
 </div>  
 <div id="skill">
-    <!-- <div class="set">
-        <fieldset>
-            <legend>Tech</legend>
-        </fieldset>
-    </div> -->
-    <div class="logo1">
+    <h1>- SKILLS -</h1>
+    <p></p>
+    <div id="order">
+        <div *ngFor="let idx of skillsList" class="set">
+            <fieldset *ngFor="let key of Object.keys(idx)">
+                <legend>{{key}}</legend>
+                    <p *ngFor="let item of idx[key]">{{item}}</p>
+            </fieldset>
+        </div>
+    </div>
+    <!-- <div class="logo1">
         <img id="icon1" src="assets/icons/1.png" alt="HTML, CSS, JS">
         <img id="icon2" src="assets/icons/11.png" alt="Java 8">
         <img id="icon3" src="assets/icons/9.png" alt="Spring">
@@ -56,7 +61,7 @@
         <img id="icon10" src="assets/icons/8.png" alt="Git">
         <img id="icon11" src="assets/icons/13.png" alt="SQLite">
         <img id="icon12" src="assets/icons/14.png" alt="MongoDB">     
-    </div>
+    </div> -->
 </div>
 <div id="projects">
     <p>hi</p>
