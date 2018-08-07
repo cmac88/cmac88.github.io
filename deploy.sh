@@ -1,6 +1,3 @@
-Skip to content
- 
-Search or jump to…
 #!/bin/bash
 
 ng build
