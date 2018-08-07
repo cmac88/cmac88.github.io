@@ -203,7 +203,7 @@ legend{
 }
 a.linkedin img, a.github img, a.email img{
     width:50px;
-    margin: 0px 10px 30px 10px;
+    margin: 0px 10px 40px 10px;
 }
 .copyright{
     float: right;
@@ -325,7 +325,7 @@ a.linkedin img, a.github img, a.email img{
     }
 }
 /* middle */
-@media only screen and (max-width: 1040px){
+@media only screen and (max-width: 1000px){
     #order{
         display: block;
     }
