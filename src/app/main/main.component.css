@@ -132,7 +132,7 @@ legend{
 }
 #projects{
     padding: 30px 40px;
-    height: 1800px;
+    /* height: 1800px; */
 
     background-image: linear-gradient(
         to left bottom, 
@@ -162,22 +162,54 @@ legend{
     display: inline-block;
     vertical-align: top;
     text-align: right;
+    
 }
 .pimg{
     width: 50%;
     display: inline-block;
     vertical-align: top;
-    text-align: left;
+    text-align: center;
 }
 .projectLarge .pimg{
-    text-align: right;
+    text-align: center;
 }
 .projectLarge .pText{
     text-align: left;
 }
 .pimg img{
     width: 300px;
+    padding: 10px;
+    
 }
+#contact{
+    padding: 20px;
+    background-image: linear-gradient(
+        to bottom, 
+        rgba(57, 67, 102, 0.534),
+        rgba(57, 67, 102, 0.534)),
+        url("/assets/images/seigaiha.png");
+}
+#contact h1{
+    text-align: center;
+    color: white;
+    text-shadow: 2px 1px 8px rgb(12, 9, 9);
+    margin-bottom: 20px;
+}
+.emailtyped{
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 13px;
+    margin-left: 8px;
+}
+a.linkedin img, a.github img, a.email img{
+    width:50px;
+    margin: 0px 10px 30px 10px;
+}
+.copyright{
+    float: right;
+    margin-right: 10px;
+}
+/* smallscreen */
 @media only screen and (max-width: 900px){
     .corie hr{
         width: 39%;  
@@ -277,9 +309,22 @@ legend{
         background: rgba(255, 255, 255, 0.753);     
         text-align: center; 
     }
-
-    
+    #contact{
+        text-align: center;
+    }
+    .emailtyped{
+       display: unset;
+    }
+    a.linkedin img, a.github img, a.email img{
+        width:50px;
+        margin: 0px 10px 20px 10px;
+    }
+    .copyright{
+        float: none;
+        margin: none;
+    }
 }
+/* middle */
 @media only screen and (max-width: 1040px){
     #order{
         display: block;
@@ -290,7 +335,7 @@ legend{
         width: 100%;
     }
     fieldset{
-        width: 80%;
+        width: 70%;
         margin: 10px 0px;
         padding: 20px 0px;
     }
@@ -306,8 +351,24 @@ legend{
     .pic2 .img1, .pic2 .img2, .pic2 .img3{
         top: 15%;
     }
+    #contact{
+        text-align: center;
+    }
+    .emailtyped{
+       display: block;
+       margin-top: 0px;
+    }
+    a.linkedin img, a.github img, a.email img{
+        width:50px;
+        margin: 0px 10px 20px 10px;
+    }
+    .copyright{
+        float: none;
+        margin: none;
+    }
 }
 
+/* large screen */
 @media only screen and (min-width: 900px){
     .pic, .show{
         display: none;
@@ -380,6 +441,5 @@ legend{
     .projectLarge{
         display: inherit;    
     }
-
 }
 
