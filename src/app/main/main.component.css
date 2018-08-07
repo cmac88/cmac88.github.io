@@ -1,3 +1,8 @@
+.some{
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+}
 .p{
     position: relative;
     top: 30px;
@@ -66,8 +71,8 @@ canvas{
         
 }
 #skill{
-    padding-top: 55px;
-    height: 1500px;
+    padding: 55px 0px 91px 0px;
+    /* height: 1500px; */
     border-top: 10px 10px solid #372350;
     background-image: linear-gradient(
         to bottom, 
@@ -81,6 +86,9 @@ canvas{
 }
 #skill h1{
     text-align: center;
+    color: white;
+    text-shadow: 2px 1px 8px rgb(12, 9, 9);
+    margin-bottom: 40px;
 }
 .logo1, .logo2{
     text-align: center;
@@ -92,8 +100,7 @@ canvas{
 .set{
     width: 200px;
     display: block;
-    /* display: inline-block; */
-    vertical-align: top;
+    /* vertical-align: top; */
     color: white;
     text-align: center;
 }
@@ -105,13 +112,13 @@ canvas{
 
 fieldset{
    
-    border-radius: 20px;
-    border: 5px solid white;
+    border-radius: 8px;
+    border: 3px solid white;
     padding: 10px;
     box-shadow: 0 1.5rem 4rem rgba(0,0,0,0.4);
     background-image: linear-gradient(
         to right bottom, 
-        rgba(39, 10, 66, 0.596),
+        rgba(39, 10, 66, 0.507),
         rgba(24, 38, 87, 0.651)),
         url("/assets/images/full-bloom.png");
 }
@@ -120,11 +127,57 @@ legend{
     text-align: center;
     color: white;
     font-size: 25px;
-    padding: 0px 8px; 
+    padding: 0px 5px; 
     text-shadow: 2px 1px 8px rgb(12, 9, 9);
 }
+#projects{
+    padding: 30px 40px;
+    height: 1800px;
 
+    background-image: linear-gradient(
+        to left bottom, 
+        rgba(102, 121, 185, 0.425),
+        rgba(125, 84, 158, 0.397)),
+        url("/assets/images/full-bloom.png");
+    
+}
+.project{
+    background: white;
+    margin: 30px 0;
+    padding: 20px;
+    box-shadow: 0 1.5rem 4rem rgba(0,0,0,0.4);
+    clip-path: polygon(10% 0, 100% 0%, 90% 100%, 0 100%);
+}
+.projectLarge, .projectSmall{
+    background: white;
+    margin: 20px 0px;
+    padding: 20px;
+    box-shadow: 0 1.5rem 4rem rgba(0,0,0,0.4);
+    display: none;
+    clip-path: polygon(0 0, 90% 0, 100% 100%, 10% 100%);
+}
 
+.pText{
+    width: 50%;
+    display: inline-block;
+    vertical-align: top;
+    text-align: right;
+}
+.pimg{
+    width: 50%;
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+}
+.projectLarge .pimg{
+    text-align: right;
+}
+.projectLarge .pText{
+    text-align: left;
+}
+.pimg img{
+    width: 300px;
+}
 @media only screen and (max-width: 900px){
     .corie hr{
         width: 39%;  
@@ -170,6 +223,7 @@ legend{
     .info p{
         text-align: justify;
         color: #372350;
+        margin: 10px 15px;
     }
     .img1, .img2, .img3{
         display: none;
@@ -203,11 +257,30 @@ legend{
         text-shadow: 2px 1px 8px rgb(12, 9, 9);
         font-size: 30px;
     }
-    
+    #projects{
+        width: unset;
+        height: unset;
+        padding: 15px;
+    }
+    .pText, .pimg{
+        display: block;
+        width: 100%;
+    }
+    .pimg img{
+        width: 200px;
+    }
+    .projectSmall, .project{
+        display: inherit;
+        clip-path: none;
+        box-shadow: none;
+        margin: 15px 0px;
+        background: rgba(255, 255, 255, 0.753);     
+        text-align: center; 
+    }
 
     
 }
-@media only screen and (max-width: 1000px){
+@media only screen and (max-width: 1040px){
     #order{
         display: block;
     }
@@ -230,9 +303,11 @@ legend{
         text-shadow: 2px 1px 8px rgb(12, 9, 9);
         font-size: 35px;
     }
-
-
+    .pic2 .img1, .pic2 .img2, .pic2 .img3{
+        top: 15%;
+    }
 }
+
 @media only screen and (min-width: 900px){
     .pic, .show{
         display: none;
@@ -246,6 +321,7 @@ legend{
     .pic2{
         width: 60%;
         position: relative;
+        /* margin-top: 2% */
         /* border: 2px solid black; */
     }
     .info, .pic2{
@@ -268,6 +344,7 @@ legend{
     }
     .info p{
         text-align: justify;
+        margin-bottom: 15px;
     }
     .img1, .img2, .img3{
         margin-top: 50px;
@@ -280,17 +357,16 @@ legend{
         transition: width 1s, margin-top 1s, border 1s;;
     }
     .img1{
-        top: 0%;
+        top: 2%;
         left: 6%;
     }
     .img2{
-        top: 0%;
+        top: 2%;
         left: 62%;
     }
     .img3{
-        top: 0%;
-        left: 34%;
-        
+        top: 2%;
+        left: 34%;  
     }
     .img1:hover, .img2:hover, .img3:hover{
         box-shadow: 0 1.5rem 4rem rgba(0,0,0,0.4);
@@ -301,5 +377,9 @@ legend{
         background: rgba(255, 255, 255, 0.479);
         transition: width 1s, margin-top 1s, border 1s;
     }
+    .projectLarge{
+        display: inherit;    
+    }
+
 }
 

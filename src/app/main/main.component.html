@@ -1,3 +1,4 @@
+
 <div id="nav">
         <ul>
           <li><a (click)="scrollToElement('me')" >About Me</a></li>
@@ -17,52 +18,84 @@
 
 <!-- <div id="about"></div> -->
 <div id="me">
-    <h1 class="show">A little about me...</h1>
-    <!-- hidden above 800px -->
-    <div class="pic">
-        <img src="assets/images/5.6.gif" alt="Corie McLaughlin">
-    </div>
-    <div class="info">  
-        <h1 class="large">A little about me...</h1>  
-        <h3>I am an outgoing, upbeat, and passionate Full Stack Developer in the Seattle area. While I have greatly enjoyed all of the lanuages I have learned, I must say </h3>
-        <h1>JAVA IS MY LOVE!</h1>
-        <p>BUT, when I am not coding, I am the mother of two amazing little monsters, I am a competitive powerlifter currently ranked fourth in the state, and a photography junkie. </p>
+    <div class="some">
+        <h1 class="show">A little about me...</h1>
+        <!-- hidden above 800px -->
+        <div class="pic">
+            <img src="assets/images/5.6.gif" alt="Corie McLaughlin">
+        </div>
+        <div class="info">  
+            <h1 class="large">A little about me...</h1>  
+            <p>I am an outgoing, upbeat, and passionate Full Stack Developer in the Seattle area. I've graduated from a full-time intensive Full-Stack coding bootcamp, and have found that I thrive on the challenges and complex problem solving that came with such a vibrant learning enviornment. Suprisingly, Java has become one of my absolute favorite languages due to it's mathmatical and minimalistic nature. I'm excited to find a position where I can continue growing my own skillset and work on a team alongside talented texh professionals.</p>
+            <p>When my eyes aren't scanning stackoverflow or the terminal, my hands are full with two amazing little monsters. They are what inspires me most and keeps me ambitious so I can be an example of perserverance and stregth for them. I am also a competitive powerlifter currently ranked fouth in the state, and a photography junkie with an eye for dramatic lighting.</p>
 
-    </div>
-    <div class="pic2">
-        <img class="img1" src="assets/images/5.6.gif" alt="Corie McLaughlin">
-        <img class="img2" src="assets/images/suvi.gif" alt="Corie McLaughlin">
-        <img class="img3" src="assets/images/will.gif" alt="Corie McLaughlin">
+        </div>
+        <div class="pic2">
+            <img class="img1" src="assets/images/5.6.gif" alt="Corie McLaughlin">
+            <img class="img2" src="assets/images/suvi.gif" alt="Corie McLaughlin">
+            <img class="img3" src="assets/images/will.gif" alt="Corie McLaughlin">
+        </div>
     </div>
 </div>  
 <div id="skill">
-    <h1>- SKILLS -</h1>
-    <p></p>
-    <div id="order">
-        <div *ngFor="let idx of skillsList" class="set">
-            <fieldset *ngFor="let key of Object.keys(idx)">
-                <legend>{{key}}</legend>
-                    <p *ngFor="let item of idx[key]">{{item}}</p>
-            </fieldset>
+    <div class="some">
+        <h1>- SKILLS -</h1>
+        <p></p>
+        <div id="order">
+            <div *ngFor="let idx of skillsList" class="set">
+                <fieldset *ngFor="let key of Object.keys(idx)">
+                    <legend>{{key}}</legend>
+                        <p *ngFor="let item of idx[key]">{{item}}</p>
+                </fieldset>
+            </div>
         </div>
     </div>
-    <!-- <div class="logo1">
-        <img id="icon1" src="assets/icons/1.png" alt="HTML, CSS, JS">
-        <img id="icon2" src="assets/icons/11.png" alt="Java 8">
-        <img id="icon3" src="assets/icons/9.png" alt="Spring">
-        <img id="icon4" src="assets/icons/6.png" alt="Angular 6">
-        <img id="icon5" src="assets/icons/5.png" alt="Node.js">
-        <img id="icon6" src="assets/icons/16.png" alt="Python 2">
-        <img id="icon7" src="assets/icons/15.png" alt="Django">
-    </div>
-    <div class="logo2">
-        <img id="icon8" src="assets/icons/10.png" alt="MySQL">
-        <img id="icon9" src="assets/icons/7.png" alt="GitHub">
-        <img id="icon10" src="assets/icons/8.png" alt="Git">
-        <img id="icon11" src="assets/icons/13.png" alt="SQLite">
-        <img id="icon12" src="assets/icons/14.png" alt="MongoDB">     
-    </div> -->
 </div>
 <div id="projects">
-    <p>hi</p>
+    <div class="some">
+        <div class="project">
+            <div class="pText">
+                <h1>Title of project 1</h1>
+                <p>This is all about project one</p>
+                <a href="">Click here to have a look</a>
+            </div>
+            <div class="pimg">
+                <img src="assets/images/pic.png" alt="">
+            </div>
+        </div>
+        <div class="projectSmall">
+            <div class="pText">
+                <h1>Title of project 2</h1>
+                <p>This is all about project two</p>
+                <a href="">Click here to have a look</a>
+            </div>
+            <div class="pimg">
+                <img src="assets/images/pic.png" alt="">
+            </div>
+        </div>
+        <div class="projectLarge">
+                <div class="pimg">
+                    <img src="assets/images/pic.png" alt="">
+                </div>
+                <div class="pText">
+                    <h1>Title of project 2</h1>
+                    <p>This is all about project two</p>
+                    <a href="">Click here to have a look</a>
+                </div>
+            </div>
+        <div class="project">
+            <div class="pText">
+                <h1>Title of project 3</h1>
+                <p>This is all about project three</p>
+                <a href="">Click here to have a look</a>
+            </div>
+            <div class="pimg">
+                <img src="assets/images/pic.png" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+<div id="contact">
+
+
 </div>

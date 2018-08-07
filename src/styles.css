@@ -5,13 +5,15 @@ body {
     height: 100%;
     margin: 0;
     padding: 0;
-    
     font-family: 'Vollkorn', serif;
+    overflow-y: scroll;
+    
+    
 }
 *{
     margin: 0px;
     padding: 0px;
 }
 .wrapper{
-    overflow-x: hidden; 
+    overflow-x: hidden;
 }
