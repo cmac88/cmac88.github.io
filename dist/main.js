@@ -284,8 +284,8 @@ var MainComponent = /** @class */ (function () {
                 c.fill();
             };
             Circle.prototype.update = function () {
-                // mouse.x = canvas.width / 2;
-                // mouse.y = canvas.height / 2;
+                mouse.x = canvas.width / 2;
+                mouse.y = canvas.height / 2;
                 if (this.x + this.radius > innerWidth || this.x - this.radius < 0) {
                     this.dx = -this.dx;
                 }
@@ -297,7 +297,7 @@ var MainComponent = /** @class */ (function () {
                 // this.x > canvas.width / 2 - 200 && this.x < canvas.width / 2 + 200 
                 // mouse.x - this.x < 50 && mouse.x - this.x > -50
                 // interactivity 
-                if (mouse.x - this.x < 40 && mouse.x - this.x > -40 && mouse.y - this.y < 40 && mouse.y - this.y > -40) {
+                if (this.x > canvas.width / 2 - 200 && this.x < canvas.width / 2 + 200 && mouse.y - this.y < 40 && mouse.y - this.y > -40) {
                     if (this.radius < maxRadius) {
                         this.radius += 1;
                     }
@@ -317,7 +317,7 @@ var MainComponent = /** @class */ (function () {
                 num = 500;
             }
             else {
-                num = 800;
+                num = 900;
             }
             console.log(num);
             for (var index = 0; index < num; index++) {
@@ -330,13 +330,13 @@ var MainComponent = /** @class */ (function () {
             }
         }
         function animate() {
-            requestAnimationFrame(animate);
+            //requestAnimationFrame(animate);
             c.clearRect(0, 0, innerWidth, innerHeight);
             for (var i = 0; i < circleArray.length; i++) {
                 circleArray[i].update();
             }
         }
-        animate();
+        setInterval(function () { return animate(); }, 60);
         init();
     };
     MainComponent.prototype.scrollToElement = function (id) {
