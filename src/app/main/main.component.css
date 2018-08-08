@@ -215,6 +215,9 @@ a.linkedin img, a.github img, a.email img{
         width: 39%;  
         margin-left: 30%;
     }
+    .corie{
+        top: 34%;
+    }
     #nav{
         text-align: center;
     }
